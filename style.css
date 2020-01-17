@@ -1,0 +1,460 @@
+nav{
+    transition: .6s;
+}
+.navHide{
+    transform: translateY(-15px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.titleSection{
+    font-size: 40px;
+    font-weight: 600;
+}
+.header{
+    background: url('img/headerFon1.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+@media(max-width: 1150px){
+    .header{
+        height: 100%;
+    }
+}
+.counter{
+    font-size: 35px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+.counterIn{
+    font-size: 35px;
+    font-weight: 700;
+}
+.counterBtn{
+    background-color: #72655F;
+    padding: 10px 40px;
+    font-size: 28px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 21px -3px rgba(0,0,0,0.75);
+    color: white;
+    cursor: pointer;
+    transition: .6s;
+    font-weight: 500;
+    animation: pulse 2s ease-in-out infinite;
+}
+.counterBtn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 9px 21px -3px rgba(0,0,0,0.75);
+}
+.headNumber{
+    font-size: 29px;
+    color: black;
+    font-weight: 700;
+    text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
+}
+.headBtn{
+    border: none;
+    outline: none;
+    background-color: gray;
+    padding: 10px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: 600;
+    animation: moveHead 2s ease-in-out infinite;
+}
+@keyframes pulse{
+    0% {
+        box-shadow: 0px 0px 21px -21px rgba(0,0,0,0.75);
+    }
+    10%{
+        box-shadow: 0px 0px 21px -21px rgba(0,0,0,0.75);
+    }
+    60%{
+        box-shadow: 0px 0px 22px 8px rgba(0,0,0,0.75);
+    }
+    100% {
+        box-shadow: 0px 0px 54px 18px rgba(0,0,0,0.0);
+    }
+}
+@keyframes moveHead{
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-2px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-1px);
+    }
+    80%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+nav .navbar-brand{
+    font-size: 40px;
+    font-weight: 600;
+} 
+.nav-link{
+    font-size: 22px;
+    padding: 0px 10px !important;
+    margin-top: 15px;
+    transition: .6s;
+    color: rgb(34, 34, 34) !important;
+}
+.headerInBlock{
+    margin-top: 120px;
+}
+.headerInBlock > h1{
+    font-size: 60px;
+}
+@media(max-width: 360px){
+    .headerInBlock > h1{
+        font-size: 50px;
+    }
+    nav .navbar-brand{
+        font-size: 36px;
+    }
+    .counterBtn{
+        font-size: 25px;
+    }
+}
+.blockTechnologies > div{
+    position: relative;
+}
+.blockTechnologies > div img:first-child{
+    top: 0px;
+    left: 0px;
+}
+.blockTechnologies > div:not(img:first-child){
+    bottom: 0px;
+    right: 0px;
+}
+.blockTechnologiesIn{
+    padding: 20px 30px;
+}
+@media(max-width: 610px){
+    .blockTechnologiesIn{
+        padding: 20px 10px;
+    }
+    #service{
+        padding: 20px !important;
+    }
+}
+@media(max-width: 700px){
+    #service{
+        padding: 15px !important;
+    }
+}
+.technologiesTitle{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(73, 73, 73);
+}
+.technologiesText{
+    padding-top: 10px;
+    font-size: 17px;
+}
+.includBlock{
+    padding: 35px;
+}
+.includBlock:first-child{
+    background-color: blanchedalmond;
+}
+.includBlock:nth-child(2){
+    background-color: gray;
+}
+.includBlock > p:first-child{
+    font-size: 30px;
+    font-weight: 600;
+}
+.includBlock > p:nth-child(2){
+    font-size: 20px;
+    font-weight: normal;
+}
+.listOffer{
+    list-style: none;
+    padding: 0px;
+}
+.listOffer li{
+    padding: 5px 0px;
+}
+.listOffer li p:first-child{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.listOffer li p:last-child{
+    font-size: 18px;
+}
+.step{
+    font-size: 24px;
+}
+.exBold{
+    font-weight: 500;
+}
+.exText{
+    font-size: 19px;
+}
+.right{
+    overflow: hidden;
+    border-radius: 50%;
+}
+.right > img{
+    animation: go 2s ease-in-out infinite;
+}
+@media(max-width: 760px){
+    .right > img{
+        animation: goDown 2s ease-in-out infinite;
+        width: 50%;
+    }
+}
+@keyframes go{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    75%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.catalogBlock{
+    padding: 15px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+}
+@media(max-width: 760px){
+    .catalogBlock{
+        width: 50%;
+    }
+}
+@media(max-width: 580px){
+    .markBrand > img{
+        width: 50%;
+    }
+}
+.catalogTitle{
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+.catalogText{
+    font-size: 17px;
+}
+.catalogPrice{
+    font-size: 19px;
+    color: blue;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#showCatalog{
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+#showCatalog > img{
+    animation: goDown 2s ease-in-out infinite;
+}
+@keyframes goDown{
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    75%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.number{
+    font-size: 26px;
+}
+.email{
+    font-size: 23px;
+}
+.adress{
+    font-size: 20px;
+}
+
+/* Анимации */
+.blockTech1{
+    opacity: 0;
+}
+.blockTech2{
+    opacity: 0;
+}
+.listOffer li,
+.downloadApp,
+.blockTech3,
+.blockTech4{
+    opacity: 0;
+}
+.fadeInLeft {
+    animation: fadeInLeft .8s ease-in-out forwards;
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+} 
+.fadeInRight {
+    animation: fadeInRight .8s ease-in-out forwards;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.fadeInUp {
+    animation: fadeInUp .8s ease-in-out forwards;
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.zoomIn {
+    animation: zoomIn 1s ease-in-out forwards;   
+}
+@keyframes flipInY {
+    0% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    100% {
+        transform: perspective(400px);
+        opacity: 1;
+    }
+}
+.flipInY {
+    backface-visibility: visible !important;
+    animation: flipInY 1s ease-in-out forwards;
+}
+@media(max-width: 760px){
+    .blockRight,.blockLeft{
+        opacity: 1;
+    }
+    .blockSpecially{
+        opacity: 1;
+    }
+    .blockPartner{
+        opacity: 1;
+    }
+    .colMini{
+        opacity: 1;
+    }
+    .footerForm{
+        opacity: 1;
+    }
+}
+@keyframes flipInX {
+    from {
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  
+    40% {
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      animation-timing-function: ease-in;
+    }
+  
+    60% {
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
+    }
+  
+    80% {
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+  
+    to {
+      transform: perspective(400px);
+    }
+  }
+  
+  .flipInX {
+    backface-visibility: visible !important;
+    animation: flipInX 1s ease-in-out forwards;
+  }
+  .headerInBlock{
+      opacity: 0;
+  }

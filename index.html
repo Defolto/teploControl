@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TeploControl24</title>
+</head>
+<body>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Заполните все поля</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="mail2.php" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Имя:</label>
+                        <input name="user_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Иван" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword2">Телефон:</label>
+                        <input name="user_phone" type="text" class="form-control" id="exampleInputPassword2" placeholder="+7 (999) 999-99-99" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword3">Почта:</label>
+                        <input name="user_email" type="email" class="form-control" id="exampleInputPassword3" placeholder="example@mail.ru" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                    <small id="emailHelp" class="form-text text-muted">Ваши данные не будут сохранены, можете быть спокойны</small>
+                </form>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Заполните все поля</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="mail.php" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Имя:</label>
+                        <input name="user_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Иван" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword2">Телефон:</label>
+                        <input name="user_phone" type="text" class="form-control" id="exampleInputPassword2" placeholder="+7 (999) 999-99-99" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                    <small id="emailHelp" class="form-text text-muted">Ваши данные не будут сохранены, можете быть спокойны</small>
+                </form>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    <div class="container-fluid header">
+        <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+            <a class="navbar-brand" href="#">TeploControl</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto" id="menu">
+                    <a class="nav-link" href="#opportunities">Возможности</a>
+                    <a class="nav-link" href="#service">Услуги</a>
+                    <a class="nav-link" href="#partners">Партнёры</a>
+                    <a class="nav-link" href="#catalog">Каталог</a>
+                    <a class="nav-link" href="#contact">Контакты</a>
+                </ul>
+                <div class="navbar-text text-center">
+                    <p class="text-center mb-2 headNumber">+7 (961) 153-71-11</p>
+                    <button class="headBtn" data-toggle="modal" data-target="#exampleModal1">Обратный звонок</button>
+                </duv>
+            </div>
+        </nav>
+        <div class="row d-flex justify-content-start">
+            <div class="col-md-6 headerInBlock">
+                <h1>GSM системы управления отоплением</h1>
+                <div class="d-flex justify-content-center flex-column">
+                    <p class="text-center counter">Оставь заявку в течение <span id="min">15</span>:<span id="sec">00</span><br><span class="counterIn">Получи скидку 10% на оборудование!</span></p>
+                    <div class="counterBtn text-center mx-auto" data-toggle="modal" data-target="#exampleModal">Оставить заявку</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-5">
+        <div class="row px-4 blockTechnologies">
+            <div class="col-sm-3">
+                <img src="img/zontLogo.jpg" alt="" width="100%">
+            </div>
+            <div class="col-sm-9">
+                <p class="text-center titleSection">Технологии будущего у Вас в доме</p>
+                <div class="row d-flex justify-content-center flex-row">
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column mb-auto blockTech1">
+                        <div class="d-flex flex-row justify-content-end">  
+                            <div class="d-flex my-auto technologiesTitle">
+                            Удобство
+                            </div>
+                            <img src="img/tec1.png" alt="" width="70px" height="70px" class="ml-3">
+                        </div>
+                        <div class="text-right technologiesText">GSM ZONT полностью настраивается под ваши индивидуальные предпочтения, которые указываете с любой точки мира</div>
+                    </div>
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column blockTech2">
+                        <div class="d-flex flex-row justify-content-start">  
+                            <img src="img/tec2.png" alt="" width="70px" height="70px" class="mr-3">
+                            <div class="d-flex my-auto technologiesTitle">
+                            Надёжность
+                            </div>
+                        </div>
+                        <div class="text-left technologiesText">В случае различных поломок, сбоев, отколнений от параметров Вы получите оперативное оповещание по SMS, уведомлениям смартфона или звонку</div>
+                    </div>
+                </div>
+                <span id="target1"></span>
+                <div class="row d-flex justify-content-center flex-row">
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column mb-auto blockTech1">
+                        <div class="d-flex flex-row justify-content-end flign-items-start">  
+                            <div class="d-flex my-auto technologiesTitle">
+                            Экономия
+                            </div>
+                            <img src="img/tec3.png" alt="" width="70px" height="70px" class="ml-3">
+                        </div>
+                        <div class="text-right technologiesText">Любая наша система всегда будет работать в максимальном режиме экономии газа и электричества. На практике люди экономят до 40% затрат на отопление</div>
+                    </div>
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column blockTech2">
+                        <div class="d-flex flex-row justify-content-start">  
+                            <img src="img/tec4.png" alt="" width="70px" height="70px" class="mr-3">
+                            <div class="d-flex my-auto technologiesTitle">
+                            Удобство
+                            </div>
+                        </div>
+                        <div class="text-left technologiesText">Управление вашей системой возможно через любой браузер, планшет, смартфон и ПК, это позволяет сделать контроль над системой максимально удобным</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-5 bg-light" id="opportunities">
+        <div class="row">
+            <div class="col-md-6 px-3">
+                <p class="text-center titleSection">Управляй отоплением через свой телефон и начинай экономить прямо сейчас!</p>
+                <div class="row justify-content-around">
+                    <span id="target2"></span>
+                    <div class="col-md-4 downloadApp">
+                        <a href="https://play.google.com/store/apps/details?id=com.microline.zont" target="blink"><img src="img/google.jpg" alt="" width="100%"></a>
+                    </div>
+                    <div class="col-md-4 downloadApp">
+                        <a href="https://apps.apple.com/ru/app/zont/id605281976" target="blink"><img src="img/appStore.jpg" alt="" width="100%"></a>
+                    </div>
+                </div>
+                <p>* Приложения являются собственностью торговой марки Микро Лайн</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="img/hand.png" alt="" width="60%">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col-xl-6">
+                <img src="img/zontPlan.jpg" alt="" width="100%">
+            </div>
+            <div class="col-xl-6">
+                <p class="text-center titleSection">Информация от производителя</p>
+                <div class="row d-flex justify-content-center flex-row">
+                    
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column mb-auto blockTech3">
+                        <div class="d-flex flex-row justify-content-end">  
+                            <div class="d-flex my-auto technologiesTitle">
+                            1 год гарантии
+                            </div>
+                            <img src="img/year1.jpg" alt="" width="70px" height="65px" class="ml-3">
+                        </div>
+                    </div>
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column blockTech4">
+                        <div class="d-flex flex-row justify-content-start">  
+                            <img src="img/info1.png" alt="" width="95px" height="65px" class="mr-3">
+                            <div class="d-flex my-auto technologiesTitle">
+                            Сделано в России
+                            </div>
+                        </div>
+                    </div>
+                </div><hr>
+                <div class="row d-flex justify-content-center flex-row">
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column mb-auto blockTech3">
+                        <div class="d-flex flex-row justify-content-end flign-items-start">  
+                            <div class="d-flex my-auto technologiesTitle text-right">
+                                Комфорт
+                            </div>
+                            <img src="img/info2.png" alt="" width="60px" height="60px" class="ml-3">
+                        </div>
+                        <div class="text-right technologiesText">ZONT всегда проверяет температуру дома, для подержания комфортных условий</div>
+                    </div>
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column mb-auto blockTech4">
+                        <div class="d-flex flex-row justify-content-start">  
+                            <img src="img/info3.png" alt="" width="60px" class="mr-3">
+                            <div class="d-flex my-auto technologiesTitle">
+                            220В
+                            </div>
+                        </div>
+                        <div class="text-left technologiesText">Во всех моделях присутствует контроль напряжения в сети 220В</div>
+                    </div>
+                </div>
+                <span id="target3"></span>
+                <div class="row d-flex justify-content-center flex-row">
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column mb-auto blockTech3">
+                        <div class="d-flex flex-row justify-content-end flign-items-start">  
+                            <div class="d-flex my-auto technologiesTitle text-right">
+                                Возможности
+                            </div>
+                            <img src="img/info4.png" alt="" width="60px" height="60px" class="ml-3">
+                        </div>
+                        <div class="text-right technologiesText">Удалённое управление котлом и поддержание нужной Вам температуры</div>
+                    </div>
+                    <div class="blockTechnologiesIn col-md-6 d-flex justify-content-end flex-column mb-auto blockTech4">
+                        <div class="d-flex flex-row justify-content-start">  
+                            <img src="img/info5.png" alt="" width="60px" class="mr-3">
+                            <div class="d-flex my-auto technologiesTitle">
+                            Уведомления
+                            </div>
+                        </div>
+                        <div class="text-left technologiesText">Возможны голосовые и SMS оповещания или сообщения в личном кабинете</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="service">
+        <p class="text-center titleSection">Наше предложение для Вас</p>
+        <div class="row">
+            <div class="col-md-6 px-5" id="service">
+                <ul class="listOffer">
+                    <li>
+                        <p>Опытные рабочие</p>
+                        <p>Наши сотрудники ежегодного проходят повышение квалификации на тренингах производителей оборудования</p>
+                    </li>
+                    <li>
+                        <p>Оперативность</p>
+                        <p>Максимально быстро запланируем монтаж и всегда подстроимся под удобное для Вас время.</p>
+                    </li>
+                    <li>
+                        <p>Гарантия качества</p>
+                        <p>Всё оборудование и комплектующие, которое мы устанавливаем, приобретается напрямую от производителя.</p>
+                    </li>
+                    <li>
+                        <p>Многолетний опыт</p>
+                        <p>Наша компания занимается монтажом GSM Zont с 2010 года. За это время мы накопили большой багаж опыта, который мы ежедневно используем в своей работе</p>
+                    </li>
+                    <span id="target4"></span>
+                </ul>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="img/certificate.jpg" alt="" width="65%">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 bg-light">
+        <div class="row justify-content-center text-center">
+            <p class="titleSection">Как мы работаем</p>
+        </div>
+        <div class="row justify-content-center" id="steps">
+            
+            <div class="col-md-2 text-center step my-auto">
+                <p>Оставь заявку на сайте или позвони нам</p>
+            </div>
+            <div class="col-md-1 my-auto right text-center">
+                <img src="img/right.png" alt="" width="100%">
+            </div>
+            <div class="col-md-2 text-center step my-auto">
+                <p>Уточним особенности, адрес, время и другие мелочи</p>
+            </div>
+            <div class="col-md-1 my-auto right text-center">
+                <img src="img/right.png" alt="" width="100%">
+            </div>
+            <div class="col-md-2 text-center step my-auto">
+                <p>Приезжаем, установливаем и настраиваем</p>
+            </div>
+            <div class="col-md-1 my-auto right text-center">
+                <img src="img/right.png" alt="" width="100%">
+            </div>
+            <div class="col-md-2 text-center step my-auto">
+                <p>Проверка работы и оплата результата</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="counterBtn" data-toggle="modal" data-target="#exampleModal">Оставить заявку</div>
+        </div>
+    </div>
+    <div class="container-fluid py-5" id="partners">
+        <div class="row justify-content-center titleSection text-center">
+            Ваш ZONT идеально подойдёт для любого котла
+        </div>
+        <span id="target5"></span>
+        <div class="row py-3 partner1">
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark1.png" alt="" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark2.png" alt="" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark3.png" alt="" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark4.png" alt="" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark5.png" alt="" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark6.png" alt="" width="80%">
+            </div>
+        </div>
+        <div class="row py-3 partner2">
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark7.png" width="88%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark8.png" width="88%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark9.png" width="88%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark10.png" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark19.png" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark12.png" width="80%">
+            </div>
+        </div>
+        <div class="row py-3 partner3">
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark13.png" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark14.png" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark15.png" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark16.png" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark17.png" width="80%">
+            </div>
+            <div class="col-sm-2 markBrand col-6 text-center">
+                <img src="img/mark18.png" width="80%">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5" id="catalog">
+        <div class="row justify-content-center titleSection pb-3">
+            Каталог
+        </div>
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c18.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT LITE GSM термостат</p>
+                <p class="text-right m-0 catalogPrice">6120 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c19.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT SMART Отопительный GSM контроллер</p>
+                <p class="text-right m-0 catalogPrice">9020  рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c10.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1V. Модуль GSM для дистанционного управления котлом</p>
+                <p class="text-right m-0 catalogPrice">9300 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c11.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1V E-BUS. Модуль GSM управления котлом c адаптером E-BUS</p>
+                <p class="text-right m-0 catalogPrice">11950 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c5.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1 Navien GSM термостат для газовых котлов Navien</p>
+                <p class="text-right m-0 catalogPrice">11990 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c6.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1000 OT Многофункциональный GSM контроллер отопления с адаптером OpenTherm</p>
+                <p class="text-right m-0 catalogPrice">20443 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c7.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1000 Многофункциональный GSM контроллер отопления</p>
+                <p class="text-right m-0 catalogPrice">16888 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c8.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1000.01 Комплект для управления 2-мя отопительными контурами и ГВС</p>
+                <p class="text-right m-0 catalogPrice">19444 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c9.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1B GSM контроллер для газовых котлов BAXI и De Dietrich</p>
+                <p class="text-right m-0 catalogPrice">10500 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c3.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT GSM-Climate EXPERT Модуль GSM для дистанционного управления электрокотлом</p>
+                <p class="text-right m-0 catalogPrice">8800 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c4.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1 GSM-Climate Модуль GSM для дистанционного управления котлом</p>
+                <p class="text-right m-0 catalogPrice">8890 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c12.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1V E-BUS Модуль GSM дистанционного управления котлом по шине E-BUS</p>
+                <p class="text-right m-0 catalogPrice">12500 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c13.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1V OT BOX. Модуль GSM управления котлом c OpenTherm</p>
+                <p class="text-right m-0 catalogPrice">11950 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c14.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-1V Модуль GSM дистанционного управления котлом</p>
+                <p class="text-right m-0 catalogPrice">9290 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c15.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-2 Wi-Fi-Climate Модуль дистанционного управления котлом по Wi-Fi</p>
+                <p class="text-right m-0 catalogPrice">8890 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c16.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H-2000 Универсальный контроллер отопления</p>
+                <p class="text-right m-0 catalogPrice">22860 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c17.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT H2000+ Универсальный контроллер для сложных систем отопления</p>
+                <p class="text-right m-0 catalogPrice">32190 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c1.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT BT-2 GSM термостат для газовых котлов Bosch и Buderus</p>
+                <p class="text-right m-0 catalogPrice">12400 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c2.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT CONNECT GSM-термостат для газовых котлов BAXI и De Dietrich</p>
+                <p class="text-right m-0 catalogPrice">11500 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c20.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT ZE-66 Блок расширения контроллера H2000+</p>
+                <p class="text-right m-0 catalogPrice">13765 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c21.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT Адаптер E-BUS</p>
+                <p class="text-right m-0 catalogPrice">3390 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c22.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT Адаптер Navien</p>
+                <p class="text-right m-0 catalogPrice">3459 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c23.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT Адаптер OpenTherm</p>
+                <p class="text-right m-0 catalogPrice">3555 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c24.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT Интерфейс OpenTherm</p>
+                <p class="text-right m-0 catalogPrice">2990 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c25.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT МЛ-726 Сенсорная панель для ручного управления термостатом ZONT</p>
+                <p class="text-right m-0 catalogPrice">4400 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c26.png" alt="" width="100%">
+                <p class="text-center catalogTitle">ZONT МЛ-732 Панель управления термостатом ZONT с ЖК-дисплеем</p>
+                <p class="text-right m-0 catalogPrice">4400 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c27.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Адаптер датчика давления ZONT</p>
+                <p class="text-right m-0 catalogPrice">2440 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c28.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Аккумулятор резервного питания, свинцово-кислотный ZONT GS-7-12</p>
+                <p class="text-right m-0 catalogPrice">920 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c29.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Аккумулятор резервного питания, свинцово-кислотный ZONT SF 12012</p>
+                <p class="text-right m-0 catalogPrice">632 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c30.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Беспроводной датчик движения с функцией термометра ZONT МЛ-570</p>
+                <p class="text-right m-0 catalogPrice">3200 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c31.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Беспроводной датчик комнатной температуры ZONT МЛ-703</p>
+                <p class="text-right m-0 catalogPrice">1868 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c32.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Беспроводной датчик комнатной температуры и влажности ZONT МЛ-719</p>
+                <p class="text-right m-0 catalogPrice">2640 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c33.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Беспроводной магнитно-контактный (герконовый) датчик открытия ZONT iDo 105 Roiscok (для H-1000)</p>
+                <p class="text-right m-0 catalogPrice">980 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c34.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Беспроводной пассивный оптоэлектронный датчик движения ZONT iDo 303 DRW Roiscok (для H-1000)</p>
+                <p class="text-right m-0 catalogPrice">1400 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c35.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Беспроводной радиодатчик контроля протечки воды емкостной ZONT МЛ-712</p>
+                <p class="text-right m-0 catalogPrice">2535 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c36.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Беспроводной уличный радиодатчик температуры воздуха ZONT МЛ-711</p>
+                <p class="text-right m-0 catalogPrice">1868 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c37.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Извещатель движения беспроводной пассивный ZONT iDo 301 W Roiscok (для H-1000)</p>
+                <p class="text-right m-0 catalogPrice">1550 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c38.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Извещатель движения проводной пассивный ZONT iDo 304 CM Roiscok (для H-1000)</p>
+                <p class="text-right m-0 catalogPrice">1200 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c39.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Извещатель пожарный дымовой проводной ZONT ИП 212-141</p>
+                <p class="text-right m-0 catalogPrice">240 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c40.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Импульсный блок питания для GSM термостатов и сигнализаций ZONT 12W/12-24V/DIN</p>
+                <p class="text-right m-0 catalogPrice">800 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c41.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной акустический охранный извещатель поверхностный ZONT АСТРА С</p>
+                <p class="text-right m-0 catalogPrice">920 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c42.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной датчик протечки воды аварийного типа ZONT АСТРА 361</p>
+                <p class="text-right m-0 catalogPrice">770 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c43.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной датчик температуры ZONT DS18S20</p>
+                <p class="text-right m-0 catalogPrice">540 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c44.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной датчик температуры ZONT DS18S20 с креплением под винт</p>
+                <p class="text-right m-0 catalogPrice">670 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c45.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной датчик температуры теплоносителя DS18B20 для ZONT</p>
+                <p class="text-right m-0 catalogPrice">600 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c46.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной магнитно-контактный (герконовый) датчик размыкания ZONT ИО 102-16/2</p>
+                <p class="text-right m-0 catalogPrice">115 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c47.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной пассивный оптоэлектронный датчик движения ZONT АСТРА 9</p>
+                <p class="text-right m-0 catalogPrice">690 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c48.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Проводной пассивный оптоэлектронный датчик движения, с защитой от животных ZONT АСТРА 512</p>
+                <p class="text-right m-0 catalogPrice">980 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c49.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Промежуточное реле IEK OIR 8А, 12В AC/DC, 2 контакта</p>
+                <p class="text-right m-0 catalogPrice">637 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c50.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Пульт дистанционного управления ZONT Home для термостатов H-1, H-2 и H-1V</p>
+                <p class="text-right m-0 catalogPrice">1780 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c51.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Радиомодуль ZONT МЛ-489 для связи термостатов ZONT с радиоустройствами</p>
+                <p class="text-right m-0 catalogPrice">1868 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c52.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Светозвуковой оповещатель (сирена) ZONT МАЯК-12КПМ (для H-1000)</p>
+                <p class="text-right m-0 catalogPrice">480 рублей</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-around rowCatalog">
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c53.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Светозвуковой охранно-пожарный оповещатель ZONT МАЯК-12К 110 (для H-1000)</p>
+                <p class="text-right m-0 catalogPrice">550 рублей</p>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 catalogBlock m-2">
+                <img src="img/catalog/c54.png" alt="" width="100%">
+                <p class="text-center catalogTitle">Универсальный адаптер OWA-PS для ZONT</p>
+                <p class="text-right m-0 catalogPrice">3200 рублей</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <button id="showCatalog" class="d-flex flex-column">Показать ещё <img src="img/bottom.png" width="30px" alt="" class="mx-auto"></button>
+        </div>
+    </div>
+    <div class="container-fluid bg-light pt-5" id="contact">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-center titleSection">Наши контакты</p>
+                <p class="number"><span class="exBold">Телефон</span>: +7 (961) 153-71-11</p>
+                <p class="email"><span class="exBold">Почта</span>: info@teplocontrol24.ru</p>
+                <p class="adress"><span class="exBold">Офис</span>: г. Ярославль, ул. Базовая 3А</p>
+                <p class="adress">Мы работаем с 8:00 до 21:00 без обеда и выходных</p>
+            </div>
+            <div class="col-md-6">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A573ec9d803cbc27bd4e8a8baa65832e0afcac02149c8f1cec711302ab64549a6&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>            
+            </div>
+        </div>
+    </div>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(56094532, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/56094532" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+    <script src="jquery-1.11.0.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="animationClass.js"></script>
+</body>
+</html>
